@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="株式会社ノートリアス" />
+<meta name="keywords" content="ノートリアス,NOTORIOUS,株式会社" />
+<title>株式会社 NOTORIOUS</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').localScroll(1000);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('#second').parallax("50%", 0.1);
+	$('#third').parallax("50%", 0.2);
+	$('#fifth').parallax("50%", 0.2);
+	$('.bg').parallax("25%", 1);
+	$('.bg0').parallax("39%", 0.9);
+	$('.bg1').parallax("80%", 1);
+	$('.bg2').parallax("60%", 0.5);
+	$('.bg3').parallax("100%", 0.03);	
+	$('.bg4').parallax("20%", 0.2);
+	$('.bg5').parallax("0%", 0.03);
+	$('.bg6').parallax("55%", 0.5);
+	$('.bg7').parallax("0%", 0.7);
+	$('.bg8').parallax("95%", 0.7);
+
+})
+</script>
+
+<script type="text/javascript">
+
+(function ($) {
+	$.rollover = function (options) {
+		var o = $.extend({
+			ovTarget: 'img.over, input.over',
+			ovImg: '_ov',
+			onImg: '_on'
+		}, options);
+		$(o.ovTarget).not('[src*="' + o.onImg + '."]').each(function () {
+			var src = $(this).attr('src');
+			var ovSrc = src.replace(/\.[^.]+$/, o.ovImg + '$&');
+			$(this).hover(function () {
+				$(this).attr('src', ovSrc);
+			}, function () {
+				$(this).attr('src', src);
+			});
+			$(window).unload(function () {
+				$(this).attr('src', src);
+			});
+		});
+	};
+	$(function () {
+		$.rollover();
+	});
+})(jQuery);
+
+</script>
+</head>
+
+<body>
+	
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"><img src="images/home.png" alt="Link" class="over"/></a></li>
+	    <li><a href="#second" title="Next Section"><img src="images/work.png" alt="Link" class="over"/></a></li>
+	    <li><a href="#third" title="Next Section"><img src="images/info.png" alt="Link" class="over"/></a></li>
+	    <li><a href="#fifth" title="Next Section"><img src="images/mail.png" alt="Link" class="over"/></a></li>
+	</ul>
+	
+	<div id="intro">
+		<div class="story"><div class="bg0"></div><div class="bg1"></div><div class="bg3"></div><div class="bg4"></div><div class="bg5"></div>
+	    	<div class="float-left">
+			
+            
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	
+	<div id="second">
+		<div class="story"><div class="bg"></div><div class="bg5"></div><div class="bg7"></div>
+	    	<div class="float-right">
+	            <h2>Advertize your Website</h2>
+	            <p>あなたの大切なホームページを広告致します！ホームページを作っても誰も見てくれないのでは意味がありません。情報とは沢山の方に見てもらってこそ力を発揮します。私達はそのお手伝いを致します!</p>
+                <h2>CMS Customize</h2>
+                <p>自分でブログのように更新できるサイト、それがＣＭＳ(コンテンツマネージメントシステム)です。お持ちのウェブサイトをＣＭＳに置き換えることで、更新作業が驚くほど簡単になります。ＳＥＯ対策も専門的知識がなくても対策出来るようになります。弊社では現在最も使われているＣＭＳの一つであるWORDPRESSを使用してサイトを構築致します。</p>
+                <h2>WEB Consulting</h2>
+	            <p>インターネット広告と言っても、ＳＥＯ対策、リスティング広告、アフィリエート広告やFACEBOOKなどソーシャルネットワークを使った物など多種多様な広告方法があります、弊社は、お客さまとともに考え、お客様のニーズに一番マッチした広告をお勧めしています。</p>
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#second-->
+	
+	<div id="third">
+		<div class="story"><div class="bg8"></div>
+	    	<div class="float-left">
+	        	<h2>COMPANY INFO</h2>
+                <ul class="no-list mgl">
+                	<li>Name　：　Notorious Co.,Ltd</li>
+                    <li>Address　：　東京都港区虎ノ門3-6-2 第二秋山ビル6F</li>
+                    <li>Phone　：　03-3434-2144</li>
+                    <li>Email　：　info@notorious.cm</li>
+                    <li>Director　：　Yusuke Kuroki</li>
+                </ul>
+                <div class="mappin">
+	            <script type="text/javascript">
+egmap_width = "300px";
+egmap_height = "300px";
+egmap_lat = 35.6666224;
+egmap_lng = 139.74565229999996;
+egmap_zoom = 17;
+egmap_open_info_window_type = 0;
+egmap_wheel_zoom_type = 0;
+egmap_icon_url = "http://www.egmap.jp/static/images/icon/arrow_red.png";
+egmap_address = "東京都港区虎ノ門３－６－２";
+egmap_name = "㈱NOTORIOUS";
+egmap_tel = "";
+egmap_url = "";
+egmap_email = "";
+egmap_image_url = "";
+egmap_image_layout_type = 1;
+</script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://www.egmap.jp/amc.js" charset="utf-8"></script>
+
+				</div>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#third-->
+	
+	<div id="fifth">
+		<div class="story">
+		    
+	        
+	        <h2>CONTACT US</h2>
+	        <form method="post" action="mailform/send.cgi" onsubmit="return sendmail(this);">
+				<table border="0" cellspacing="10" cellpadding="0" id="mailbox" width="100%">
+                    <tr>
+                    	<td width="20%" class="bar3" align="left"><span class="arow">お名前&nbsp;</span><span class="red">(必須)</span></td>
+                        <td class="inputbox"><input type="text" name="お名前(必須)" size="50" maxlength="50"/></td>
+                    </tr>                    
+
+                    <tr>
+                    	<td  class="bar3"><span class="arow">ふりがな&nbsp;</span><span class="red">(必須)</span></td>
+                        <td ><input type="text" name="お名前(必須)"  size="50" maxlength="50"/></td>
+                    </tr>                    
+                   
+					<tr>
+                    	<td class="bar3"><span class="arow">メールアドレス&nbsp;</span><span class="red">(必須)</span></td>
+                        <td><input type="text" name="email(必須)"  size="50" maxlength="50"/></td>
+                    </tr>
+
+
+                    <tr>
+                    	<td class="bar3"><span class="arow">お電話番号&nbsp;</span><span class="red">(必須)</span></td>
+                        <td><input type="text" name="電話番号(必須)"/></td>
+                    </tr>
+
+                   <tr>
+                    	<td class="bar3"><span class="arow">ご相談内容&nbsp;</span><span class="red">(必須)</span></td>
+                        <td><textarea name="ご相談内容(必須)" rows="20" cols="50" size="50"></textarea></td>
+                    </tr>
+
+					<tr>
+                    	<td class="bar3">&nbsp;</td>
+						<td><input type="submit" value="送信" /> <input type="reset" name="reset" value="リセット" /></td>
+					</tr>
+				</table>
+                
+			</form>
+	        
+	        
+	    </div> <!--.story-->
+	</div> <!--#fifth-->
+    
+        <!-- mailform -->
+<script type="text/javascript" src="mailform/mailform.js" charset="utf-8"></script>
+<script type="text/javascript" src="mailform/postcodes/get.cgi?js" charset="utf-8"></script>
+
+<script>
+jQuery(function($){
+    $( 'a, input[type="button"], input[type="submit"], button' )
+      .bind( 'touchstart', function(){
+        $( this ).addClass( 'hover' );
+    }).bind( 'touchend', function(){
+        $( this ).removeClass( 'hover' );
+    });
+});
+</script>
+</body>
+</html>
